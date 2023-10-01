@@ -6,10 +6,18 @@
     <title>Storybook for the Web Engineering Module</title>
 	<style>
         body{
-            margin: 20px;
+            background-color: #2b6777;
         }
         header{
-            font-size: 25pt;
+            font-size: 30pt;
+            text-align: center;
+            background-color: #f2f2f2;
+            color: black;
+        }
+        footer{
+            font-size: 10pt;
+            text-align: center;
+            color: white;
         }
         h2{
             font-size: 15pt;
@@ -22,26 +30,53 @@
         caption{
             text-align: center;
         }
-        caption{
-            -webkit-text-fill-color: lightseagreen;
+        .block{
+            width: 125px;
+            aspect-ratio: .75 / 1;
+            background-color: #c8d8e4;
+            border: 2px solid black;
+            padding: .3em;
+        }
+        #context{
+            display: flex;
+            padding: .3em;
+            align-items: center;
+            gap: 3em;
+
+        }
+        #content{
+            display: flex;
+            padding: .3em;
+            gap: 3em;
+        }
+        #criteria{
+            color: white;
+        }
+        #overview{
+            color: white;
+        }
+        #effort{
+            color: white;
         }
 	</style>
 </head>
 
 <body>
     <header>
-        <dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module
+        <div>
+            <dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module
+        </div>
     </header>
     <main>
         <section id="context">
-            <h1>Module delivery mode</h1>
-            <p> This installment of the <dfn title="WebEngineering">webeC</dfn> module.
+            <div class="block"><h1>Module delivery mode</h1></div>
+            <p style="color: white"> This installment of the <dfn title="WebEngineering">webeC</dfn> module.
             </p>
 
         </section>
         <section id="content">
-            <h1>Delivery dates and examination details</h1>
-            <article>
+            <div class="block"><h1>Delivery dates and examination details</h1></div>
+            <article id="overview">
                 <h2>Overview</h2>
                 <table>
                     <caption>Delivery dates</caption>
@@ -136,7 +171,7 @@
                     </tfoot>
                 </table>
             </article>
-            <article>
+            <article id="effort">
                 <h2> Total Effort</h2>
                 <p> Classroom lectures add up to <code>15 * 3h = 45h</code>.</p>
                 <p> Prework and afterwork, including homework adds up to <code>15 * 1h = 15h</code>.</p>
